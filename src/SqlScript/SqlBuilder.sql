@@ -1,4 +1,5 @@
-
+USE ZZ_DEVICES
+GO
 
 declare @TableName varchar(max)  = 'provider'
 
@@ -156,7 +157,7 @@ print @Result
 
 
 
-declare @INSERTResult varchar(max)  = 'CREATE PROCEDURE SP' + @TableName + '_INSERT 
+declare @INSERTResult varchar(max)  = 'CREATE PROCEDURE SP_' + UPPER(@TableName) + '_INSERT 
 '
 
 declare @INSERTResult2 varchar(max)  = '
